@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:camping_app/views/auth/signin_page.dart';
+//Routes
+import 'package:camping_app/views/splash/splash_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
       ),
-      home: SignInPage(),
+      home: const SplashPage(),
     );
   }
 }
