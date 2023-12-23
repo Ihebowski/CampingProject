@@ -1,5 +1,5 @@
-import 'package:camping_app/views/auth/signin_page.dart';
 import 'package:flutter/material.dart';
+import 'package:camping_app/views/auth/signin_page.dart';
 
 void main() {
   runApp(const MyApp());

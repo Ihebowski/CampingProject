@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:camping_app/views/constants/colors.dart';
 // Routes
 import 'package:camping_app/views/auth/signup_page.dart';
+import 'package:camping_app/views/core/landing_page.dart';
 
 class SignInPage extends StatelessWidget {
   const SignInPage({super.key});
@@ -136,12 +137,12 @@ class SignInPage extends StatelessWidget {
                         width: double.infinity,
                         child: TextButton(
                           onPressed: () {
-                            // Navigator.push(
-                            //   context,
-                            //   MaterialPageRoute(
-                            //     builder: (context) => const LandingPage(),
-                            //   ),
-                            // );
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const LandingPage(),
+                              ),
+                            );
                           },
                           style: ButtonStyle(
                             shape: MaterialStateProperty.all<RoundedRectangleBorder>(
