@@ -1,5 +1,5 @@
-import 'package:camping_app/model/place.dart';
-import 'package:camping_app/model/detail.dart';
+import 'package:camping_app/models/place.dart';
+import 'package:camping_app/models/detail.dart';
 
 final bookmarkList = <Place>[
   Place(

@@ -1,4 +1,4 @@
-import 'package:camping_app/model/detail.dart';
+import 'package:camping_app/models/detail.dart';
 
 class Place {
   final String image;

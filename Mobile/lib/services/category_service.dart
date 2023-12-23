@@ -1,4 +1,4 @@
-import 'package:camping_app/model/category.dart';
+import 'package:camping_app/models/category.dart';
 
 final categoryList = <Category> [
   const Category(title: "Camping", path: "assets/icons/categories/camping.png"),
