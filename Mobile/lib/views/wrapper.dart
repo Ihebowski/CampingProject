@@ -8,7 +8,7 @@ class WrapperPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    bool loggedIn = true;
+    bool loggedIn = false;
     if(loggedIn){
       return const LandingPage();
     } else {

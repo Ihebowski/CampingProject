@@ -19,6 +19,7 @@ class BookmarkPage extends StatelessWidget {
             const SliverAppBar(
               backgroundColor: appBackgroundColor,
               surfaceTintColor: Colors.transparent,
+              automaticallyImplyLeading: false,
               centerTitle: true,
               floating: true,
               title: Text(

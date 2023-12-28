@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 //Routes
 import 'package:camping_app/views/splash/splash_page.dart';
+import 'package:camping_app/views/core/landing_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
       ),
-      home: const SplashPage(),
+      home: const LandingPage(),
     );
   }
 }

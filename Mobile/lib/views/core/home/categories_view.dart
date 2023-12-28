@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:camping_app/views/constants/colors.dart';
 //Services
 import 'package:camping_app/services/category_service.dart';
@@ -12,15 +11,15 @@ class CategoriesView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 175.0,
+      height: 160.0,
       child: Column(
         children: [
-          Row(
+          const Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
                 "Categories",
-                style: GoogleFonts.roboto(
+                style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize:26.0,
                   color: text1Color,
@@ -28,7 +27,7 @@ class CategoriesView extends StatelessWidget {
               ),
               Text(
                 "See More",
-                style: GoogleFonts.roboto(
+                style: TextStyle(
                   fontWeight: FontWeight.w700,
                   fontSize: 16.0,
                   color: text1Color,
@@ -37,7 +36,7 @@ class CategoriesView extends StatelessWidget {
             ],
           ),
           const SizedBox(
-            height: 25.0,
+            height: 15.0,
           ),
           Expanded(
             child: ListView.separated(

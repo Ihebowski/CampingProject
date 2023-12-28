@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:camping_app/views/constants/colors.dart';
 //Models
 import 'package:camping_app/models/place.dart';
@@ -80,7 +79,7 @@ class PlaceCard extends StatelessWidget {
                         padding: const EdgeInsets.only(left: 2.5),
                         child: Text(
                           place.title,
-                          style: GoogleFonts.roboto(
+                          style: const TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 22.0,
                             color: text3Color,

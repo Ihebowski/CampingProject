@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:camping_app/views/constants/colors.dart';
 // Routes
 import 'package:camping_app/views/auth/signin_page.dart';
@@ -24,12 +23,12 @@ class SignUpPage extends StatelessWidget {
                 children: <Widget>[
                   Column(
                     children: [
-                      Row(
+                      const Row(
                         children: [
                           Text(
                             "Create a New Account",
                             textAlign: TextAlign.start,
-                            style: GoogleFonts.roboto(
+                            style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 32.0,
                               color: primaryColor,

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 import 'package:camping_app/views/constants/colors.dart';
 //Routes
@@ -21,6 +20,7 @@ class HomePage extends StatelessWidget {
           SliverAppBar(
             backgroundColor: appBackgroundColor,
             surfaceTintColor: Colors.transparent,
+            automaticallyImplyLeading: false,
             pinned: true,
             bottom: PreferredSize(
               preferredSize: const Size.fromHeight(25.0),
@@ -32,13 +32,13 @@ class HomePage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Row(
+                        const Row(
                           children: [
-                            const CircleAvatar(
+                            CircleAvatar(
                               radius: 25.0,
                               backgroundColor: itemBackgroundColor,
                             ),
-                            const SizedBox(
+                            SizedBox(
                               width: 10.0,
                             ),
                             Column(
@@ -47,14 +47,14 @@ class HomePage extends StatelessWidget {
                               children: [
                                 Text(
                                   "Welcome,",
-                                  style: GoogleFonts.roboto(
+                                  style: TextStyle(
                                     fontWeight: FontWeight.w300,
                                     fontSize: 16.0,
                                   ),
                                 ),
                                 Text(
                                   "Iheb Barrah",
-                                  style: GoogleFonts.roboto(
+                                  style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 18.0,
                                   ),
@@ -111,14 +111,17 @@ class HomePage extends StatelessWidget {
           ),
           const SliverToBoxAdapter(
             child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 10.0,vertical: 10.0),
+              padding: EdgeInsets.symmetric(horizontal: 10.0,vertical: 5.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   PlaceView(),
+                  SizedBox(height: 10.0),
                   CategoriesView(),
+                  SizedBox(height: 10.0),
                   BestView(),
+                  SizedBox(height: 10.0),
                 ],
               ),
             ),

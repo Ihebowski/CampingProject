@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 import 'package:camping_app/views/constants/colors.dart';
 //Routes
@@ -24,6 +23,7 @@ class _ProfilePageState extends State<ProfilePage> {
           const SliverAppBar(
             backgroundColor: appBackgroundColor,
             surfaceTintColor: Colors.transparent,
+            automaticallyImplyLeading: false,
             centerTitle: true,
             pinned: true,
             title: Text(
@@ -55,19 +55,19 @@ class _ProfilePageState extends State<ProfilePage> {
                     ),
                   ),
                   const SizedBox(height: 20.0),
-                  Text(
+                  const Text(
                     "Iheb Barrah",
                     textAlign: TextAlign.start,
-                    style: GoogleFonts.roboto(
+                    style: TextStyle(
                       fontWeight: FontWeight.w500,
                       fontSize: 22.0,
                       color: text1Color,
                     ),
                   ),
-                  Text(
+                  const Text(
                     "@Ihebowski",
                     textAlign: TextAlign.start,
-                    style: GoogleFonts.roboto(
+                    style: TextStyle(
                       fontWeight: FontWeight.normal,
                       fontSize: 16.0,
                       color: text2Color,
@@ -89,17 +89,17 @@ class _ProfilePageState extends State<ProfilePage> {
                               },
                             );
                           },
-                          child: Row(
+                          child: const Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Row(
                                 children: [
-                                  const Icon(FluentIcons.person_edit_24_filled),
-                                  const SizedBox(width: 20.0),
+                                  Icon(FluentIcons.person_edit_24_filled),
+                                  SizedBox(width: 20.0),
                                   Text(
                                     "Edit Profile",
                                     textAlign: TextAlign.start,
-                                    style: GoogleFonts.roboto(
+                                    style: TextStyle(
                                       fontWeight: FontWeight.normal,
                                       fontSize: 18.0,
                                       color: text1Color,
@@ -107,7 +107,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                   ),
                                 ],
                               ),
-                              const Icon(
+                              Icon(
                                 FluentIcons.chevron_right_32_filled,
                                 color: secondaryColor,
                               ),
@@ -124,18 +124,18 @@ class _ProfilePageState extends State<ProfilePage> {
                               },
                             );
                           },
-                          child: Row(
+                          child: const Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Row(
                                 children: [
-                                  const Icon(
+                                  Icon(
                                       FluentIcons.location_arrow_24_filled),
-                                  const SizedBox(width: 20.0),
+                                  SizedBox(width: 20.0),
                                   Text(
                                     "My Places",
                                     textAlign: TextAlign.start,
-                                    style: GoogleFonts.roboto(
+                                    style: TextStyle(
                                       fontWeight: FontWeight.normal,
                                       fontSize: 18.0,
                                       color: text1Color,
@@ -143,7 +143,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                   ),
                                 ],
                               ),
-                              const Icon(
+                              Icon(
                                 FluentIcons.chevron_right_32_filled,
                                 color: secondaryColor,
                               ),
@@ -160,17 +160,17 @@ class _ProfilePageState extends State<ProfilePage> {
                               },
                             );
                           },
-                          child: Row(
+                          child: const Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Row(
                                 children: [
-                                  const Icon(FluentIcons.settings_24_filled),
-                                  const SizedBox(width: 20.0),
+                                  Icon(FluentIcons.settings_24_filled),
+                                  SizedBox(width: 20.0),
                                   Text(
                                     "Settings",
                                     textAlign: TextAlign.start,
-                                    style: GoogleFonts.roboto(
+                                    style: TextStyle(
                                       fontWeight: FontWeight.normal,
                                       fontSize: 18.0,
                                       color: text1Color,
@@ -178,7 +178,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                   ),
                                 ],
                               ),
-                              const Icon(
+                              Icon(
                                 FluentIcons.chevron_right_32_filled,
                                 color: secondaryColor,
                               ),
@@ -191,8 +191,8 @@ class _ProfilePageState extends State<ProfilePage> {
                   const SizedBox(height: 25.0),
                   const Divider(color: itemBackgroundColor),
                   const SizedBox(height: 25.0),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 15.0),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 15.0),
                     child: Column(
                       children: [
                         Row(
@@ -200,13 +200,13 @@ class _ProfilePageState extends State<ProfilePage> {
                           children: [
                             Row(
                               children: [
-                                const Icon(
+                                Icon(
                                     FluentIcons.local_language_24_filled),
-                                const SizedBox(width: 20.0),
+                                SizedBox(width: 20.0),
                                 Text(
                                   "Language",
                                   textAlign: TextAlign.start,
-                                  style: GoogleFonts.roboto(
+                                  style: TextStyle(
                                     fontWeight: FontWeight.normal,
                                     fontSize: 18.0,
                                     color: text1Color,
@@ -214,25 +214,25 @@ class _ProfilePageState extends State<ProfilePage> {
                                 ),
                               ],
                             ),
-                            const Icon(
+                            Icon(
                               FluentIcons.chevron_right_32_filled,
                               color: secondaryColor,
                             ),
                           ],
                         ),
-                        const SizedBox(height: 15.0),
+                        SizedBox(height: 15.0),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Row(
                               children: [
-                                const Icon(FluentIcons
+                                Icon(FluentIcons
                                     .chat_bubbles_question_24_filled),
-                                const SizedBox(width: 20.0),
+                                SizedBox(width: 20.0),
                                 Text(
                                   "FAQs",
                                   textAlign: TextAlign.start,
-                                  style: GoogleFonts.roboto(
+                                  style: TextStyle(
                                     fontWeight: FontWeight.normal,
                                     fontSize: 18.0,
                                     color: text1Color,
@@ -240,25 +240,25 @@ class _ProfilePageState extends State<ProfilePage> {
                                 ),
                               ],
                             ),
-                            const Icon(
+                            Icon(
                               FluentIcons.chevron_right_32_filled,
                               color: secondaryColor,
                             ),
                           ],
                         ),
-                        const SizedBox(height: 15.0),
+                        SizedBox(height: 15.0),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Row(
                               children: [
-                                const Icon(
+                                Icon(
                                     FluentIcons.person_feedback_24_filled),
-                                const SizedBox(width: 20.0),
+                                SizedBox(width: 20.0),
                                 Text(
                                   "Rate Us",
                                   textAlign: TextAlign.start,
-                                  style: GoogleFonts.roboto(
+                                  style: TextStyle(
                                     fontWeight: FontWeight.normal,
                                     fontSize: 18.0,
                                     color: text1Color,
@@ -266,7 +266,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                 ),
                               ],
                             ),
-                            const Icon(
+                            Icon(
                               FluentIcons.chevron_right_32_filled,
                               color: secondaryColor,
                             ),
@@ -278,8 +278,8 @@ class _ProfilePageState extends State<ProfilePage> {
                   const SizedBox(height: 25.0),
                   const Divider(color: itemBackgroundColor),
                   const SizedBox(height: 25.0),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 15.0),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 15.0),
                     child: Column(
                       children: [
                         Row(
@@ -287,15 +287,15 @@ class _ProfilePageState extends State<ProfilePage> {
                           children: [
                             Row(
                               children: [
-                                const Icon(
+                                Icon(
                                   FluentIcons.arrow_enter_20_filled,
                                   color: accentColor,
                                 ),
-                                const SizedBox(width: 20.0),
+                                SizedBox(width: 20.0),
                                 Text(
                                   "Logout",
                                   textAlign: TextAlign.start,
-                                  style: GoogleFonts.roboto(
+                                  style: TextStyle(
                                     fontWeight: FontWeight.normal,
                                     fontSize: 18.0,
                                     color: accentColor,
@@ -303,7 +303,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                 ),
                               ],
                             ),
-                            const Icon(
+                            Icon(
                               FluentIcons.chevron_right_32_filled,
                               color: accentColor,
                             ),

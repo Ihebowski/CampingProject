@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 import 'package:camping_app/views/constants/colors.dart';
 //Models
@@ -8,6 +7,7 @@ import 'package:camping_app/models/place.dart';
 import 'package:camping_app/views/core/shared/rating_view.dart';
 import 'package:camping_app/views/core/place/detail_card.dart';
 import 'package:camping_app/views/core/place/picture_viewer.dart';
+import 'package:camping_app/views/core/place/review_page.dart';
 
 class PlacePage extends StatelessWidget {
   final Place place;
@@ -47,16 +47,17 @@ class PlacePage extends StatelessWidget {
             actions: [
               PopupMenuButton(
                 color: appBackgroundColor,
+                surfaceTintColor: Colors.transparent,
                 icon: const Icon(
                   FluentIcons.more_vertical_32_regular,
                   color: text1Color,
                   size: 28.0,
                 ),
                 itemBuilder: (context) => [
-                  PopupMenuItem(
+                  const PopupMenuItem(
                     child: Text(
                       "Report",
-                      style: GoogleFonts.roboto(
+                      style: TextStyle(
                         color: text1Color,
                         fontWeight: FontWeight.normal,
                         fontSize: 16.0,
@@ -95,7 +96,7 @@ class PlacePage extends StatelessWidget {
                           Text(
                             place.title,
                             textAlign: TextAlign.justify,
-                            style: GoogleFonts.roboto(
+                            style: const TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 32.0,
                               color: text1Color,
@@ -117,7 +118,7 @@ class PlacePage extends StatelessWidget {
                               ),
                               Text(
                                 place.location,
-                                style: GoogleFonts.roboto(
+                                style: const TextStyle(
                                   fontSize: 18.0,
                                   color: text2Color,
                                 ),
@@ -137,9 +138,9 @@ class PlacePage extends StatelessWidget {
                           const SizedBox(
                             height: 7.5,
                           ),
-                          Text(
+                          const Text(
                             "About",
-                            style: GoogleFonts.roboto(
+                            style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 26.0,
                               color: text1Color,
@@ -151,7 +152,7 @@ class PlacePage extends StatelessWidget {
                           Text(
                             place.description,
                             textAlign: TextAlign.justify,
-                            style: GoogleFonts.roboto(
+                            style: const TextStyle(
                               fontWeight: FontWeight.normal,
                               fontSize: 16.0,
                               color: text2Color,
@@ -160,9 +161,9 @@ class PlacePage extends StatelessWidget {
                           const SizedBox(
                             height: 15.0,
                           ),
-                          Text(
+                          const Text(
                             "Details",
-                            style: GoogleFonts.roboto(
+                            style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 26.0,
                               color: text1Color,
@@ -184,9 +185,9 @@ class PlacePage extends StatelessWidget {
                               ),
                             ),
                           ),
-                          Text(
+                          const Text(
                             "Pictures",
-                            style: GoogleFonts.roboto(
+                            style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 26.0,
                               color: text1Color,
@@ -228,44 +229,104 @@ class PlacePage extends StatelessWidget {
                               },
                             ),
                           ),
+                          const SizedBox(
+                            height: 25.0,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              SizedBox(
+                                height: 60.0,
+                                width: MediaQuery.of(context).size.width*0.60,
+                                child: TextButton(
+                                  onPressed: () {},
+                                  style: ButtonStyle(
+                                    shape: MaterialStateProperty.all<
+                                        RoundedRectangleBorder>(
+                                      RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(10.0),
+                                      ),
+                                    ),
+                                    elevation:
+                                    const MaterialStatePropertyAll<double>(0.0),
+                                    backgroundColor:
+                                    const MaterialStatePropertyAll<Color>(
+                                        primaryColor),
+                                  ),
+                                  child: const Text(
+                                    "Navigate To Maps",
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.normal,
+                                      fontSize: 18.0,
+                                      color: text3Color,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              SizedBox(
+                                height: 60.0,
+                                width: 60.0,
+                                child: TextButton(
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => const ReviewPage(),
+                                      ),
+                                    );
+                                  },
+                                  style: ButtonStyle(
+                                    shape: MaterialStateProperty.all<
+                                        RoundedRectangleBorder>(
+                                      RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(10.0),
+                                      ),
+                                    ),
+                                    elevation:
+                                    const MaterialStatePropertyAll<double>(0.0),
+                                    backgroundColor:
+                                    const MaterialStatePropertyAll<Color>(
+                                        itemBackgroundColor),
+                                  ),
+                                  child: const Icon(
+                                    FluentIcons.comment_48_regular,
+                                    color: primaryColor,
+                                    size: 28.0,
+                                  ),
+                                ),
+                              ),
+                              SizedBox(
+                                height: 60.0,
+                                width: 60.0,
+                                child: TextButton(
+                                  onPressed: () {},
+                                  style: ButtonStyle(
+                                    shape: MaterialStateProperty.all<
+                                        RoundedRectangleBorder>(
+                                      RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(10.0),
+                                      ),
+                                    ),
+                                    elevation:
+                                    const MaterialStatePropertyAll<double>(0.0),
+                                    backgroundColor:
+                                    const MaterialStatePropertyAll<Color>(
+                                        itemBackgroundColor),
+                                  ),
+                                  child: const Icon(
+                                    FluentIcons.share_48_regular,
+                                    color: primaryColor,
+                                    size: 28.0,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
                         ],
                       ),
                     ),
                     const SizedBox(
-                      height: 35.0,
-                    ),
-                    Center(
-                      child: SizedBox(
-                        height: 60.0,
-                        width: 275.0,
-                        child: TextButton(
-                          onPressed: () {},
-                          style: ButtonStyle(
-                            shape: MaterialStateProperty.all<
-                                RoundedRectangleBorder>(
-                              RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10.0),
-                              ),
-                            ),
-                            elevation:
-                                const MaterialStatePropertyAll<double>(0.0),
-                            backgroundColor:
-                                const MaterialStatePropertyAll<Color>(
-                                    primaryColor),
-                          ),
-                          child: Text(
-                            "Navigate To Maps",
-                            style: GoogleFonts.roboto(
-                              fontWeight: FontWeight.normal,
-                              fontSize: 18.0,
-                              color: text3Color,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 15.0,
+                      height: 25.0,
                     ),
                   ],
                 ),

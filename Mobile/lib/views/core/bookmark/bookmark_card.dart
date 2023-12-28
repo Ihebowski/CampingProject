@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 import 'package:camping_app/views/constants/colors.dart';
 //Models
@@ -72,7 +71,7 @@ class BookmarkCard extends StatelessWidget {
                   Text(
                     place.title,
                     textAlign: TextAlign.justify,
-                    style: GoogleFonts.roboto(
+                    style: TextStyle(
                       fontSize: 22.0,
                       fontWeight: FontWeight.bold,
                       color: text3Color,

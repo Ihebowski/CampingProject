@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 import 'package:camping_app/views/constants/colors.dart';
 
@@ -38,10 +37,10 @@ class PictureViewer extends StatelessWidget {
                   size: 28.0,
                 ),
                 itemBuilder: (context) => [
-                  PopupMenuItem(
+                  const PopupMenuItem(
                     child: Text(
                       "Report",
-                      style: GoogleFonts.roboto(
+                      style: TextStyle(
                         color: text1Color,
                         fontWeight: FontWeight.normal,
                         fontSize: 16.0,

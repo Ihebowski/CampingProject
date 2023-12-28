@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:camping_app/views/constants/colors.dart';
 
 class DetailCard extends StatelessWidget {
@@ -36,7 +35,7 @@ class DetailCard extends StatelessWidget {
           Expanded(
             child: Text(
               title,
-              style: GoogleFonts.roboto(
+              style: const TextStyle(
                 color: text1Color,
                 fontSize: 16.0,
                 fontWeight: FontWeight.normal,

@@ -20,6 +20,7 @@ class SearchPage extends StatelessWidget {
             SliverAppBar(
               backgroundColor: appBackgroundColor,
               surfaceTintColor: Colors.transparent,
+              automaticallyImplyLeading: false,
               centerTitle: true,
               pinned: true,
               title: const Text(

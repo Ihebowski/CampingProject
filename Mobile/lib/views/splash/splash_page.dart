@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:camping_app/views/constants/colors.dart';
 //Routes
 import 'package:camping_app/views/wrapper.dart';
@@ -27,7 +26,7 @@ class SplashPage extends StatelessWidget {
                       children: [
                         Text(
                           "Explore",
-                          style: GoogleFonts.roboto(
+                          style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 32.0,
                             color: text1Color,
@@ -39,7 +38,7 @@ class SplashPage extends StatelessWidget {
                         Text(
                           "Unlock the world's wonders at your fingertips. Explore, experience, and embrace the extraordinary with our app.",
                           textAlign: TextAlign.center,
-                          style: GoogleFonts.roboto(
+                          style: TextStyle(
                             fontWeight: FontWeight.w400,
                             fontSize: 16.0,
                             color: text1Color,
@@ -52,7 +51,7 @@ class SplashPage extends StatelessWidget {
                       children: [
                         Text(
                           "Visit",
-                          style: GoogleFonts.roboto(
+                          style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 32.0,
                             color: text1Color,
@@ -64,7 +63,7 @@ class SplashPage extends StatelessWidget {
                         Text(
                           "Journey into the extraordinary. Explore new horizons and unforgettable destinations with our app – your gateway to a world of discovery.",
                           textAlign: TextAlign.center,
-                          style: GoogleFonts.roboto(
+                          style: TextStyle(
                             fontWeight: FontWeight.w400,
                             fontSize: 16.0,
                             color: text1Color,
@@ -77,7 +76,7 @@ class SplashPage extends StatelessWidget {
                       children: [
                         Text(
                           "Review",
-                          style: GoogleFonts.roboto(
+                          style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 32.0,
                             color: text1Color,
@@ -89,7 +88,7 @@ class SplashPage extends StatelessWidget {
                         Text(
                           "Empower your adventures. Explore, Rate, Review – Your insights, your guide to a world of unforgettable places.",
                           textAlign: TextAlign.center,
-                          style: GoogleFonts.roboto(
+                          style: TextStyle(
                             fontWeight: FontWeight.w400,
                             fontSize: 16.0,
                             color: text1Color,
@@ -108,7 +107,7 @@ class SplashPage extends StatelessWidget {
                 width: double.infinity,
                 child: TextButton(
                   onPressed: () {
-                    Navigator.push(
+                    Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
                         builder: (context) => const WrapperPage(),
